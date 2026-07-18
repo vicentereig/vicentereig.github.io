@@ -2,40 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vicente's OSS Projects</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 600px;
-      margin: 80px auto;
-      padding: 0 20px;
-      background: #0d1117;
-      color: #c9d1d9;
-    }
-    h1 { color: #58a6ff; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 16px 0; }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
-    a:hover { text-decoration: underline; }
-    .desc { color: #8b949e; font-size: 0.9em; margin-top: 4px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vicente Reig Rincón de Arellano · The Open-Source Works</title>
+  <meta name="description" content="The open-source works of Vicente Reig Rincón de Arellano — DSPy.rb, 7 command-line tools, and typed Ruby for the age of language models.">
+  <meta property="og:title" content="Vicente Reig Rincón de Arellano · The Open-Source Works">
+  <meta property="og:description" content="DSPy.rb, 7 command-line tools, and typed Ruby for the age of language models.">
+  <meta property="og:image" content="https://oss.vicente.services/images/vicente-reig-speaking.jpg">
+  <meta property="og:url" content="https://oss.vicente.services/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e8e0d2'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' fill='%23191512'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>OSS Projects</h1>
-  <ul>
-    <li>
-      <a href="/dspy.rb">DSPy.rb</a>
-      <div class="desc">A Ruby port of Stanford's DSPy framework for programming with foundation models</div>
-    </li>
-    <li>
-      <a href="/sorbet-baml">Sorbet BAML</a>
-      <div class="desc">BAML schema format support for Sorbet</div>
-    </li>
-  </ul>
+
+<nav class="nav page" aria-label="Primary">
+  <a class="nav__mark" href="/">Vicente Reig</a>
+  <a class="nav__cta" href="https://github.com/vicentereig">GitHub</a>
+</nav>
+
+<header class="page">
+  <figure class="fold">
+    <img src="images/vicente-reig-speaking.jpg" width="533" height="799" fetchpriority="high"
+         alt="Vicente Reig Rincón de Arellano speaking at a lectern, a projected prompt template behind him.">
+    <figcaption><span class="orn">&#10059;</span> Prompts are programs.</figcaption>
+  </figure>
+</header>
+
+<main>
+  <section class="story page" aria-labelledby="story-h">
+    <h1 id="story-h">The Ruby answer.</h1>
+    <p>DSPy.rb: Stanford&rsquo;s DSPy, in Ruby &mdash; signatures, modules, optimizers, no brittle prompt strings. Turns out other people were tired of prompting too.</p>
+    <div class="ctas">
+      <a class="btn btn--fill" href="/dspy.rb">Visit DSPy.rb</a>
+      <a class="btn btn--line" href="https://github.com/vicentereig/dspy.rb">Source</a>
+    </div>
+  </section>
+
+  <div class="band" id="cli">
+    <section class="desk page" aria-labelledby="cli-h">
+      <h2 id="cli-h"><span class="orn">&#9670;</span> 7 CLIs. No dashboards.</h2>
+      <ul class="roster">
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/quaid">quaid</a> &mdash; export ChatGPT and Claude conversations locally.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/plausible-cli">plausible-cli</a> &mdash; Plausible Analytics for agents and humans.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/garmin-cli">garmin-cli</a> &mdash; your Garmin Connect data, from the terminal.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/whatsapp-cli">whatsapp-cli</a> &mdash; WhatsApp with a JSON interface.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/orb">orb</a> &mdash; Orb billing forensics.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/lf-cli">lf-cli</a> &mdash; Langfuse traces and metrics.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/exa-ruby">exa-ruby</a> &mdash; typed client and CLI for Exa.ai search.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="desk page" id="typed" aria-labelledby="typed-h">
+    <h2 id="typed-h"><span class="orn">&#9670;</span> Typed. On purpose.</h2>
+    <ul class="typed">
+      <li><span class="orn">&#10059;</span><span><a href="/sorbet-baml">sorbet-baml</a> &mdash; Sorbet type definitions for BAML.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/dspy.rb/blob/main/lib/sorbet/toon/README.md">sorbet-toon</a> &mdash; typed Markdown tables for LLMs. Structs survive the round-trip.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/a2ui-rails">a2ui-rails</a> &mdash; Google&rsquo;s A2UI, ported to Rails on DSPy.rb and Turbo Streams.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/engineering">engineering</a> &mdash; Claude Code engineering skills.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/dspy-rb-skill">dspy-rb-skill</a> &mdash; a Claude Code skill for DSPy.rb work.</span></li>
+    </ul>
+  </section>
+
+  <section class="about page" aria-labelledby="about-h">
+    <h2 id="about-h"><span class="orn">&#9670;</span> The author.</h2>
+    <p>Fractional product engineering leader &mdash; startups, bootstrap through Series&nbsp;B. Previously Apple, Atlassian, New&nbsp;Relic.</p>
+    <div class="links">
+      <a href="https://vicente.services">vicente.services</a>
+      <a href="https://x.com/highwayvaquero">@highwayvaquero</a>
+      <a href="https://linkedin.com/in/vicentereig">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="page">
+    <a href="https://github.com/vicentereig">github.com/vicentereig</a>
+    <span class="orn" aria-hidden="true">&#9670;</span>
+    <span>Open source. Licenses live in each repo.</span>
+    <span class="orn" aria-hidden="true">&#9670;</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
 </body>
 </html>

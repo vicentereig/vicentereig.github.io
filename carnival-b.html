@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carnival B · Bento — Vicente Reig</title>
+  <meta name="description" content="The open-source works of Vicente Reig Rincón de Arellano — Carnival variant B.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eef2d0'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' fill='%23132b1a'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+/* Hallmark · genre: editorial (Carnival register) · macrostructure: Bento Grid (loud) · theme: Carnival (drop: Citrus Riot)
+ * nav: N2 floating chip · footer: Ft8 marquee scroll · enrichment: user photograph (halftone-framed tile) · F1 knobs: tiles=12, spans=irregular, border=ink-all
+ * contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · mobile: pass (34, 49, 50–57) */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V5 */
+
+:root {
+  --color-paper:      oklch(94% 0.040 85);
+  --color-paper-2:    oklch(90% 0.048 82);
+  --color-ink:        oklch(20% 0.07 145);
+  --color-muted:      oklch(48% 0.04 130);
+  --color-accent:     oklch(82% 0.20 130);
+  --color-accent-2:   oklch(28% 0.28 350);
+  --color-accent-ink: oklch(20% 0.07 145);
+  --color-focus:      oklch(28% 0.28 350);
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body:    "Space Grotesk", ui-sans-serif, sans-serif;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 2.2rem;
+  --text-display: clamp(2.6rem, 5.5vw + 1rem, 5.5rem);
+
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem;
+  --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem;
+
+  --rule-bold: 2px;
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --page-max: 74rem;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+html { overflow-x: clip; }
+body { overflow-x: clip; margin: 0; background: var(--color-paper); color: var(--color-ink);
+  font-family: var(--font-body); font-size: var(--text-base); line-height: 1.5; }
+
+.page { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-gutter); }
+
+h1, h2, h3 { font-style: normal; overflow-wrap: anywhere; min-width: 0;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-variation-settings: "wdth" 110; }
+
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* ---- nav · N2 floating chip ---- */
+.chip { position: fixed; top: var(--space-md); right: var(--space-md); z-index: 200;
+  display: inline-flex; align-items: center; gap: var(--space-sm);
+  background: var(--color-paper); border: var(--rule-bold) solid var(--color-ink);
+  box-shadow: var(--shadow-hard); padding: var(--space-xs) var(--space-md); min-height: 44px; }
+.chip__mark { font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-variation-settings: "wdth" 110; font-size: var(--text-md); line-height: 1; }
+.chip .orn { color: var(--color-accent-2); }
+.chip a { font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; white-space: nowrap;
+  text-decoration-thickness: 2px; text-underline-offset: 3px; line-height: 1; }
+.chip a:hover { color: var(--color-accent-2); }
+.chip a:active { color: var(--color-muted); }
+
+/* ---- header ---- */
+.head { padding-block: var(--space-2xl) var(--space-xl); }
+.head h1 { margin: 0; font-size: var(--text-display); line-height: 1.02; letter-spacing: -0.005em; max-width: 14ch; }
+.head p { margin: var(--space-md) 0 0; max-width: 44ch; font-size: var(--text-md); }
+
+/* ---- bento ---- */
+.bento { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg);
+  padding-block-end: var(--space-2xl); padding-inline-end: var(--space-xs); }
+.tile { border: var(--rule-bold) solid var(--color-ink); box-shadow: var(--shadow-hard);
+  background: var(--color-paper); padding: var(--space-lg);
+  display: flex; flex-direction: column; gap: var(--space-xs); text-decoration: none; min-width: 0;
+  transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
+a.tile:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-ink); }
+a.tile:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--color-ink); }
+.tile h2, .tile h3 { margin: 0; font-size: var(--text-lg); line-height: 1.05; letter-spacing: 0.02em; }
+.tile p { margin: 0; font-size: var(--text-sm); }
+.tile .orn { color: var(--color-accent-2); }
+
+.tile--lime { background: var(--color-accent); color: var(--color-accent-ink); }
+.tile--lime .orn { color: var(--color-accent-2); }
+.tile--magenta { background: var(--color-accent-2); color: var(--color-paper); }
+.tile--magenta .orn { color: var(--color-accent); }
+.tile--magenta a:focus-visible, .tile--magenta:focus-visible { outline-color: var(--color-accent); }
+
+.tile--hero { grid-column: span 2; grid-row: span 2; justify-content: space-between; }
+.tile--hero h2 { font-size: var(--text-xl); line-height: 1.04; }
+.tile--hero p { font-size: var(--text-base); max-width: 38ch; }
+.tile--photo { grid-column: span 2; grid-row: span 2; padding: 0; overflow: clip; position: relative; max-height: 30rem; }
+.tile--photo img { display: block; width: 100%; height: 100%; max-height: 30rem; object-fit: cover; object-position: 50% 18%;
+  filter: grayscale(1) contrast(1.12); mix-blend-mode: multiply; }
+.tile--photo figcaption { position: absolute; inset-inline: 0; bottom: 0;
+  background: var(--color-accent); color: var(--color-accent-ink);
+  border-top: var(--rule-bold) solid var(--color-ink);
+  padding: var(--space-xs) var(--space-md); font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; }
+.tile--wide { grid-column: span 2; }
+
+.tile__go { margin-top: auto; font-weight: 700; text-transform: uppercase; font-size: var(--text-sm);
+  letter-spacing: 0.02em; white-space: nowrap; }
+
+.tile--about .links { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-lg); margin-top: auto; }
+.tile--about .links a { font-weight: 700; text-transform: uppercase; font-size: var(--text-sm); white-space: nowrap;
+  text-decoration-thickness: 2px; text-underline-offset: 3px; min-height: 44px; display: inline-flex; align-items: center; }
+.tile--about .links a:hover { color: var(--color-accent); }
+.tile--about .links a:active { opacity: 0.7; }
+
+/* ---- footer · Ft8 marquee ---- */
+.foot { overflow: clip; background: var(--color-accent-2); color: var(--color-paper);
+  border-top: var(--rule-bold) solid var(--color-ink); }
+.foot__track { display: inline-flex; white-space: nowrap; animation: marquee 32s linear infinite; }
+.foot__seq { padding-block: var(--space-md); font-family: var(--font-display); font-weight: 700;
+  text-transform: uppercase; font-size: var(--text-md); letter-spacing: 0.04em; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.foot__meta { background: var(--color-paper); color: var(--color-ink);
+  border-top: var(--rule-bold) solid var(--color-ink); }
+.foot__meta .page { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-lg);
+  padding-block: var(--space-md); font-size: var(--text-sm); align-items: center; }
+.foot__meta a { white-space: nowrap; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.foot__meta a:hover { color: var(--color-accent-2); }
+.foot__meta a:active { color: var(--color-muted); }
+
+@media (max-width: 60rem) {
+  .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 40rem) {
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  .tile--hero, .tile--photo, .tile--wide { grid-column: span 1; grid-row: span 1; }
+  .tile--photo { min-height: 20rem; }
+  .head { padding-block-start: var(--space-2xl); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 150ms !important; }
+  .foot__track { animation: none; }
+  a.tile:hover { transform: none; }
+}
+  </style>
+</head>
+<body>
+
+<nav class="chip" aria-label="Primary">
+  <span class="chip__mark">VR</span>
+  <span class="orn" aria-hidden="true">&#10059;</span>
+  <a href="https://github.com/vicentereig">GitHub</a>
+</nav>
+
+<header class="head page">
+  <h1>Open source. Loud about it.</h1>
+  <p>The works of Vicente Reig Rinc&oacute;n de Arellano. One Ruby framework, 7 CLIs, typed everything.</p>
+</header>
+
+<main class="page">
+  <div class="bento">
+    <a class="tile tile--hero tile--lime" href="/dspy.rb">
+      <h2><span class="orn">&#9670;</span> Program the model.</h2>
+      <p>DSPy.rb: Stanford&rsquo;s DSPy, in Ruby &mdash; signatures, modules, optimizers, no brittle prompt strings.</p>
+      <span class="tile__go">Visit DSPy.rb &rarr;</span>
+    </a>
+    <figure class="tile tile--photo">
+      <img src="images/vicente-reig-speaking.jpg" width="533" height="799"
+           alt="Vicente Reig Rincón de Arellano speaking at a lectern, a projected prompt template behind him.">
+      <figcaption>&#10059; On stage. Prompts are programs.</figcaption>
+    </figure>
+    <a class="tile" href="https://github.com/vicentereig/quaid"><h3><span class="orn">&#10059;</span> quaid</h3><p>Get your chats back. Export ChatGPT and Claude conversations locally.</p></a>
+    <a class="tile tile--magenta" href="https://github.com/vicentereig/plausible-cli"><h3><span class="orn">&#10059;</span> plausible-cli</h3><p>Plausible Analytics for AI agents and humans.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/garmin-cli"><h3><span class="orn">&#10059;</span> garmin-cli</h3><p>Pull your Garmin Connect data from the terminal.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/whatsapp-cli"><h3><span class="orn">&#10059;</span> whatsapp-cli</h3><p>WhatsApp from your terminal. JSON interface for automation.</p></a>
+    <a class="tile tile--magenta" href="https://github.com/vicentereig/orb"><h3><span class="orn">&#10059;</span> orb</h3><p>Orb billing forensics from the terminal.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/lf-cli"><h3><span class="orn">&#10059;</span> lf-cli</h3><p>Query Langfuse traces and metrics from the terminal.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/exa-ruby"><h3><span class="orn">&#10059;</span> exa-ruby</h3><p>Typed Ruby client and CLI for the Exa.ai search API.</p></a>
+    <a class="tile tile--wide" href="/sorbet-baml"><h3><span class="orn">&#10059;</span> sorbet-baml</h3><p>Sorbet type definitions for BAML. Schema and Ruby agree on what the model returns.</p></a>
+    <a class="tile tile--wide tile--lime" href="https://github.com/vicentereig/a2ui-rails"><h3><span class="orn">&#10059;</span> a2ui-rails</h3><p>Google&rsquo;s A2UI, ported to Rails on DSPy.rb and Turbo Streams.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/dspy.rb/blob/main/lib/sorbet/toon/README.md"><h3><span class="orn">&#10059;</span> sorbet-toon</h3><p>Typed Markdown tables for LLMs. Structs survive the round-trip.</p></a>
+    <a class="tile" href="https://github.com/vicentereig/engineering"><h3><span class="orn">&#10059;</span> engineering</h3><p>Claude Code engineering skills.</p></a>
+    <div class="tile tile--magenta tile--about tile--wide">
+      <h3><span class="orn">&#9670;</span> The maintainer.</h3>
+      <p>Fractional product engineering leader &mdash; startups, bootstrap through Series&nbsp;B. Previously Apple, Atlassian, New&nbsp;Relic.</p>
+      <div class="links">
+        <a href="https://vicente.services">vicente.services</a>
+        <a href="https://x.com/highwayvaquero">@highwayvaquero</a>
+        <a href="https://linkedin.com/in/vicentereig">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div aria-hidden="true">
+    <div class="foot__track">
+      <span class="foot__seq">OPEN&nbsp;SOURCE&nbsp;&#9670;&nbsp;RUBY&nbsp;&#9670;&nbsp;DSPY.RB&nbsp;&#9670;&nbsp;7&nbsp;CLIS&nbsp;&#9670;&nbsp;TYPED&nbsp;AGENTS&nbsp;&#9670;&nbsp;MIT&nbsp;&#9670;&nbsp;</span>
+      <span class="foot__seq">OPEN&nbsp;SOURCE&nbsp;&#9670;&nbsp;RUBY&nbsp;&#9670;&nbsp;DSPY.RB&nbsp;&#9670;&nbsp;7&nbsp;CLIS&nbsp;&#9670;&nbsp;TYPED&nbsp;AGENTS&nbsp;&#9670;&nbsp;MIT&nbsp;&#9670;&nbsp;</span>
+    </div>
+  </div>
+  <div class="foot__meta">
+    <div class="page">
+      <a href="https://github.com/vicentereig">github.com/vicentereig</a>
+      <span aria-hidden="true">&#9670;</span>
+      <span>&copy; 2026 Vicente Reig Rinc&oacute;n de Arellano</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

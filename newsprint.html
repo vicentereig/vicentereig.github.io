@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vicente Reig Rincón de Arellano · The Open-Source Works</title>
+  <meta name="description" content="The open-source works of Vicente Reig Rincón de Arellano — DSPy.rb, command-line tools, and typed Ruby for the age of language models.">
+  <meta property="og:title" content="Vicente Reig Rincón de Arellano · The Open-Source Works">
+  <meta property="og:description" content="DSPy.rb, command-line tools, and typed Ruby for the age of language models.">
+  <meta property="og:image" content="https://oss.vicente.services/images/vicente-reig-speaking.jpg">
+  <meta property="og:url" content="https://oss.vicente.services/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f5f2ea'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia,serif' font-weight='bold' font-size='24' fill='%23231f1a'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="newsprint-tokens.css">
+  <link rel="stylesheet" href="newsprint.css">
+</head>
+<body>
+
+<header class="mast page">
+  <p class="mast__line">The Open-Source Works · Summer 2026 · oss.vicente.services</p>
+  <p class="mast__name">Vicente Reig Rinc&oacute;n de&nbsp;Arellano</p>
+  <nav class="mast__nav" aria-label="Sections">
+    <ul>
+      <li><a href="#dspy">DSPy.rb</a></li>
+      <li><a href="#cli">Command Line</a></li>
+      <li><a href="#ruby">Typed Ruby</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+  <div class="mast__rule" aria-hidden="true"></div>
+</header>
+
+<main class="page">
+
+  <section class="lead" id="dspy" aria-labelledby="lead-hl">
+    <div class="lead__story">
+      <h1 class="lead__hl" id="lead-hl"><a href="/dspy.rb">Tired of Prompting the Model, He Programmed&nbsp;It</a></h1>
+      <p class="lead__deck">DSPy.rb is Stanford&rsquo;s DSPy in Ruby &mdash; signatures, modules, and optimizers in place of brittle prompt strings. Turns out other people were tired of prompting too.</p>
+      <p class="byline">By <b>Vicente Reig Rinc&oacute;n de Arellano</b> · Maintainer, DSPy.rb</p>
+      <div class="lead__links">
+        <a class="link" href="/dspy.rb">Visit DSPy.rb &rarr;</a>
+        <a class="link" href="https://github.com/vicentereig/dspy.rb">Source on GitHub &rarr;</a>
+      </div>
+    </div>
+    <figure class="lead__photo">
+      <img src="images/vicente-reig-speaking.jpg" width="533" height="799" fetchpriority="high"
+           alt="Vicente Reig Rincón de Arellano speaking at a lectern with a laptop, a projected prompt template filling the screen behind him.">
+      <figcaption>The maintainer, on stage, making the case that prompts should be programs.</figcaption>
+    </figure>
+  </section>
+
+  <section class="quote-room" aria-label="Pull quote">
+    <blockquote>&ldquo;I like the cathedral-builder&rsquo;s view: zoom out, watch where the pilgrims go, decide where the next window belongs.&rdquo;</blockquote>
+    <p class="attribution">Vicente Reig Rinc&oacute;n de Arellano, maintainer of DSPy.rb</p>
+  </section>
+
+  <section class="desk" id="cli" aria-labelledby="cli-head">
+    <h2 class="desk__head" id="cli-head">The Command-Line Desk</h2>
+    <p class="desk__intro">Tools that give people direct access to their own data &mdash; no dashboards, no waiting, just a terminal and a question. Most began as something the maintainer needed himself.</p>
+    <ul class="listing">
+      <li><a href="https://github.com/vicentereig/quaid">
+        <span class="listing__name">quaid</span>
+        <span class="listing__desc">Get your chats back &mdash; export ChatGPT and Claude conversations locally.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/plausible-cli">
+        <span class="listing__name">plausible-cli</span>
+        <span class="listing__desc">Plausible Analytics for AI agents and humans.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/garmin-cli">
+        <span class="listing__name">garmin-cli</span>
+        <span class="listing__desc">Pull your Garmin Connect data from the terminal.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/whatsapp-cli">
+        <span class="listing__name">whatsapp-cli</span>
+        <span class="listing__desc">WhatsApp from your terminal, with a JSON interface for automation.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/orb">
+        <span class="listing__name">orb</span>
+        <span class="listing__desc">Orb billing forensics from the terminal.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/lf-cli">
+        <span class="listing__name">lf-cli</span>
+        <span class="listing__desc">Query Langfuse traces and metrics from the terminal.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+      <li><a href="https://github.com/vicentereig/exa-ruby">
+        <span class="listing__name">exa-ruby</span>
+        <span class="listing__desc">Typed Ruby client and CLI for the Exa.ai search API.</span>
+        <span class="listing__mark" aria-hidden="true">&rarr;</span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="desk" id="ruby" aria-labelledby="ruby-head">
+    <h2 class="desk__head" id="ruby-head">Typed Ruby &amp; Agents</h2>
+    <p class="desk__intro">Types that survive contact with a language model, and the Claude Code skills that put them to work.</p>
+    <div class="briefs">
+      <article class="brief">
+        <h3><a href="/sorbet-baml">sorbet-baml</a></h3>
+        <p>Sorbet type definitions for BAML, so schema and Ruby agree on what the model returns.</p>
+      </article>
+      <article class="brief">
+        <h3><a href="https://github.com/vicentereig/dspy.rb/blob/main/lib/sorbet/toon/README.md">sorbet-toon</a></h3>
+        <p>Typed Markdown tables for LLMs &mdash; structs survive the round-trip.</p>
+      </article>
+      <article class="brief">
+        <h3><a href="https://github.com/vicentereig/a2ui-rails">a2ui-rails</a></h3>
+        <p>A Rails port of Google&rsquo;s A2UI, built on DSPy.rb and Turbo Streams.</p>
+      </article>
+      <article class="brief">
+        <h3><a href="https://github.com/vicentereig/engineering">engineering</a></h3>
+        <p>Claude Code engineering skills.</p>
+      </article>
+      <article class="brief">
+        <h3><a href="https://github.com/vicentereig/dspy-rb-skill">dspy-rb-skill</a></h3>
+        <p>A Claude Code skill for DSPy.rb development.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-head">
+    <h2 class="desk__head" id="about-head">About the Maintainer</h2>
+    <p class="about__body">Vicente Reig Rinc&oacute;n de Arellano is a fractional product engineering leader, mostly working with startups from bootstrap through Series&nbsp;B. He builds products <em>and</em> the teams who build them. Previously at Apple, Atlassian, and New&nbsp;Relic.</p>
+    <div class="about__links">
+      <a class="link" href="https://vicente.services">vicente.services &rarr;</a>
+      <a class="link" href="https://x.com/highwayvaquero">@highwayvaquero &rarr;</a>
+      <a class="link" href="https://linkedin.com/in/vicentereig">LinkedIn &rarr;</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="colophon page">
+  <p>Composed in Newsreader and Libre Franklin on warm paper, OKLCH throughout, no JavaScript. Every project above is open source; licenses live in each repository. &copy; 2026 · <a href="https://github.com/vicentereig">github.com/vicentereig</a></p>
+</footer>
+
+</body>
+</html>

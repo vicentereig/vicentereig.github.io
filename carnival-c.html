@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carnival C · Photographic — Vicente Reig</title>
+  <meta name="description" content="The open-source works of Vicente Reig Rincón de Arellano — Carnival variant C.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e8e0d2'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' fill='%23191512'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+/* Hallmark · genre: editorial (Carnival register) · macrostructure: Photographic · theme: Carnival (drop: Pressroom)
+ * nav: N9 edge-aligned minimal · footer: Ft2 inline single line · enrichment: user photograph (H6 fold, poster-treated) · H6 knobs: area=16/7 crop, caption=lower-left band
+ * contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · mobile: pass (34, 49, 50–57) */
+/* Hallmark · pre-emit critique: P5 H4 E4 S5 R5 V5 */
+
+:root {
+  --color-paper:      oklch(89% 0.025 65);
+  --color-paper-2:    oklch(85% 0.030 62);
+  --color-ink:        oklch(16% 0.02 60);
+  --color-muted:      oklch(45% 0.025 55);
+  --color-accent:     oklch(78% 0.18 75);
+  --color-accent-2:   oklch(34% 0.10 240);
+  --color-accent-ink: oklch(16% 0.02 60);
+  --color-focus:      oklch(34% 0.10 240);
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body:    "Space Grotesk", ui-sans-serif, sans-serif;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 2.2rem;
+  --text-display: clamp(2.6rem, 6vw + 1rem, 6rem);
+
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem;
+  --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+
+  --rule-bold: 2px;
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --page-max: 74rem;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+html { overflow-x: clip; }
+body { overflow-x: clip; margin: 0; background: var(--color-paper); color: var(--color-ink);
+  font-family: var(--font-body); font-size: var(--text-base); line-height: 1.5; }
+
+.page { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-gutter); }
+
+h1, h2, h3 { font-style: normal; overflow-wrap: anywhere; min-width: 0;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-variation-settings: "wdth" 110; }
+
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* ---- nav · N9 edge-aligned ---- */
+.nav { display: flex; align-items: center; justify-content: space-between;
+  padding-block: var(--space-md); }
+.nav__mark { font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-variation-settings: "wdth" 110; font-size: var(--text-lg); line-height: 1; text-decoration: none; }
+.nav__cta { display: inline-flex; align-items: center; min-height: 44px; padding: var(--space-xs) var(--space-md);
+  border: var(--rule-bold) solid var(--color-ink); box-shadow: var(--shadow-hard);
+  background: var(--color-accent); color: var(--color-accent-ink);
+  font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.02em;
+  text-decoration: none; white-space: nowrap; line-height: 1;
+  transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
+.nav__cta:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-ink); }
+.nav__cta:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--color-ink); }
+
+/* ---- photographic fold · H6 ---- */
+.fold { position: relative; margin-block-end: var(--space-2xl); }
+.fold img { display: block; width: 100%; height: min(72svh, 40rem); object-fit: cover; object-position: 50% 22%;
+  border: var(--rule-bold) solid var(--color-ink); box-shadow: var(--shadow-hard);
+  filter: grayscale(1) contrast(1.15); mix-blend-mode: multiply; }
+.fold figcaption { position: absolute; left: 0; bottom: var(--space-lg); max-width: min(34rem, 88%);
+  background: var(--color-accent); color: var(--color-accent-ink);
+  border: var(--rule-bold) solid var(--color-ink); box-shadow: var(--shadow-hard);
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-variation-settings: "wdth" 110; font-size: var(--text-xl); line-height: 1.04; letter-spacing: 0.02em;
+  overflow-wrap: anywhere; min-width: 0; }
+.fold figcaption .orn { color: var(--color-accent-2); }
+
+/* ---- story ---- */
+.story { padding-block-end: var(--space-2xl); }
+.story h1 { margin: 0 0 var(--space-md); font-size: var(--text-display); line-height: 1.02; letter-spacing: -0.005em; max-width: 14ch; }
+.story p { margin: 0 0 var(--space-lg); font-size: var(--text-md); max-width: 48ch; }
+.story .ctas { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: var(--space-sm) var(--space-lg);
+  font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.02em;
+  text-decoration: none; white-space: nowrap; line-height: 1;
+  border: var(--rule-bold) solid var(--color-ink); box-shadow: var(--shadow-hard);
+  transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
+.btn--fill { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn--line { background: var(--color-paper); color: var(--color-ink); }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-ink); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--color-ink); }
+
+/* ---- slate band: tools ---- */
+.band { background: var(--color-accent-2); color: var(--color-paper);
+  border-block: var(--rule-bold) solid var(--color-ink); }
+.band .desk { padding-block: var(--space-2xl); }
+.band h2 { margin: 0 0 var(--space-xl); font-size: var(--text-xl); line-height: 1.04; letter-spacing: 0.02em; }
+.band h2 .orn { color: var(--color-accent); }
+.band a:focus-visible { outline-color: var(--color-accent); }
+.roster { list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md) var(--space-2xl); }
+.roster li { display: flex; gap: var(--space-sm); align-items: baseline;
+  border-bottom: var(--rule-bold) solid oklch(from var(--color-paper) l c h / 0.25); padding-block: var(--space-sm); }
+.roster .orn { color: var(--color-accent); flex-shrink: 0; }
+.roster a { font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap;
+  text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.roster a:hover { color: var(--color-accent); }
+.roster a:active { opacity: 0.7; }
+.roster span.desc { font-size: var(--text-sm); }
+
+/* ---- paper desk: typed ruby ---- */
+.desk { padding-block: var(--space-2xl); }
+.desk h2 { margin: 0 0 var(--space-xl); font-size: var(--text-xl); line-height: 1.04; letter-spacing: 0.02em; }
+.desk h2 .orn { color: var(--color-accent-2); }
+.typed { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-md); max-width: 62ch; }
+.typed li { display: flex; gap: var(--space-sm); align-items: baseline; }
+.typed .orn { color: var(--color-accent-2); flex-shrink: 0; }
+.typed a { font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap;
+  text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.typed a:hover { color: var(--color-accent-2); }
+.typed a:active { color: var(--color-muted); }
+.typed span { font-size: var(--text-sm); }
+
+/* ---- about strip ---- */
+.about { border-top: var(--rule-bold) solid var(--color-accent-2); padding-block: var(--space-xl) var(--space-2xl); }
+.about h2 { margin: 0 0 var(--space-md); font-size: var(--text-xl); line-height: 1.04; letter-spacing: 0.02em; }
+.about h2 .orn { color: var(--color-accent-2); }
+.about p { margin: 0 0 var(--space-lg); max-width: 52ch; }
+.about .links { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+.about .links a { font-weight: 700; text-transform: uppercase; font-size: var(--text-sm); white-space: nowrap;
+  text-decoration-thickness: 2px; text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+.about .links a:hover { color: var(--color-accent-2); }
+.about .links a:active { color: var(--color-muted); }
+
+/* ---- footer · Ft2 inline ---- */
+.foot { border-top: var(--rule-bold) solid var(--color-ink); padding-block: var(--space-md) var(--space-xl); }
+.foot .page { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-md);
+  font-size: var(--text-sm); align-items: center; }
+.foot a { white-space: nowrap; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.foot a:hover { color: var(--color-accent-2); }
+.foot a:active { color: var(--color-muted); }
+.foot .orn { color: var(--color-accent-2); }
+
+@media (max-width: 60rem) {
+  .roster { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 40rem) {
+  .fold figcaption { position: static; margin-top: calc(-1 * var(--rule-bold)); max-width: 100%;
+    box-shadow: none; font-size: var(--text-lg); }
+  .fold img { height: 60svh; box-shadow: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 150ms !important; }
+  .btn:hover, .nav__cta:hover { transform: none; }
+}
+  </style>
+</head>
+<body>
+
+<nav class="nav page" aria-label="Primary">
+  <a class="nav__mark" href="/">Vicente Reig</a>
+  <a class="nav__cta" href="https://github.com/vicentereig">GitHub</a>
+</nav>
+
+<header class="page">
+  <figure class="fold">
+    <img src="images/vicente-reig-speaking.jpg" width="533" height="799" fetchpriority="high"
+         alt="Vicente Reig Rincón de Arellano speaking at a lectern, a projected prompt template behind him.">
+    <figcaption><span class="orn">&#10059;</span> Prompts are programs.</figcaption>
+  </figure>
+</header>
+
+<main>
+  <section class="story page" aria-labelledby="story-h">
+    <h1 id="story-h">The Ruby answer.</h1>
+    <p>DSPy.rb: Stanford&rsquo;s DSPy, in Ruby &mdash; signatures, modules, optimizers, no brittle prompt strings. Turns out other people were tired of prompting too.</p>
+    <div class="ctas">
+      <a class="btn btn--fill" href="/dspy.rb">Visit DSPy.rb</a>
+      <a class="btn btn--line" href="https://github.com/vicentereig/dspy.rb">Source</a>
+    </div>
+  </section>
+
+  <div class="band" id="cli">
+    <section class="desk page" aria-labelledby="cli-h">
+      <h2 id="cli-h"><span class="orn">&#9670;</span> 7 CLIs. No dashboards.</h2>
+      <ul class="roster">
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/quaid">quaid</a> &mdash; export ChatGPT and Claude conversations locally.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/plausible-cli">plausible-cli</a> &mdash; Plausible Analytics for agents and humans.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/garmin-cli">garmin-cli</a> &mdash; your Garmin Connect data, from the terminal.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/whatsapp-cli">whatsapp-cli</a> &mdash; WhatsApp with a JSON interface.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/orb">orb</a> &mdash; Orb billing forensics.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/lf-cli">lf-cli</a> &mdash; Langfuse traces and metrics.</span></li>
+        <li><span class="orn">&#10059;</span><span class="desc"><a href="https://github.com/vicentereig/exa-ruby">exa-ruby</a> &mdash; typed client and CLI for Exa.ai search.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="desk page" id="typed" aria-labelledby="typed-h">
+    <h2 id="typed-h"><span class="orn">&#9670;</span> Typed. On purpose.</h2>
+    <ul class="typed">
+      <li><span class="orn">&#10059;</span><span><a href="/sorbet-baml">sorbet-baml</a> &mdash; Sorbet type definitions for BAML.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/dspy.rb/blob/main/lib/sorbet/toon/README.md">sorbet-toon</a> &mdash; typed Markdown tables for LLMs. Structs survive the round-trip.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/a2ui-rails">a2ui-rails</a> &mdash; Google&rsquo;s A2UI, ported to Rails on DSPy.rb and Turbo Streams.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/engineering">engineering</a> &mdash; Claude Code engineering skills.</span></li>
+      <li><span class="orn">&#10059;</span><span><a href="https://github.com/vicentereig/dspy-rb-skill">dspy-rb-skill</a> &mdash; a Claude Code skill for DSPy.rb work.</span></li>
+    </ul>
+  </section>
+
+  <section class="about page" aria-labelledby="about-h">
+    <h2 id="about-h"><span class="orn">&#9670;</span> The author.</h2>
+    <p>Fractional product engineering leader &mdash; startups, bootstrap through Series&nbsp;B. Previously Apple, Atlassian, New&nbsp;Relic.</p>
+    <div class="links">
+      <a href="https://vicente.services">vicente.services</a>
+      <a href="https://x.com/highwayvaquero">@highwayvaquero</a>
+      <a href="https://linkedin.com/in/vicentereig">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="page">
+    <a href="https://github.com/vicentereig">github.com/vicentereig</a>
+    <span class="orn" aria-hidden="true">&#9670;</span>
+    <span>Open source. Licenses live in each repo.</span>
+    <span class="orn" aria-hidden="true">&#9670;</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

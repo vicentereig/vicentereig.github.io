@@ -1,0 +1,41 @@
+/* Hallmark · genre: editorial (Carnival register) · macrostructure: Photographic · theme: Carnival (drop: Pressroom) · nav: N9 · footer: Ft2 · anchor: amber/slate */
+
+:root {
+  /* Paper band: light (89%) · display: display-heavy (Big Shoulders 800, wdth 110) · accents: amber-gold + slate-blue */
+  --color-paper:      oklch(89% 0.025 65);
+  --color-paper-2:    oklch(85% 0.030 62);
+  --color-ink:        oklch(16% 0.02 60);
+  --color-muted:      oklch(45% 0.025 55);
+  --color-accent:     oklch(78% 0.18 75);
+  --color-accent-2:   oklch(34% 0.10 240);
+  --color-accent-ink: oklch(16% 0.02 60);
+  --color-focus:      oklch(34% 0.10 240);
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body:    "Space Grotesk", ui-sans-serif, sans-serif;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 2.2rem;
+  --text-display: clamp(2.6rem, 6vw + 1rem, 6rem);
+
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  --rule-bold: 2px;
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+
+  --page-max: 74rem;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+}
